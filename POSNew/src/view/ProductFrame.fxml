@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="product_frame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <children>
+      <TableView fx:id="tb_product" layoutX="15.0" layoutY="15.0" prefHeight="311.0" prefWidth="780.0" AnchorPane.bottomAnchor="279.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columns>
+          <TableColumn fx:id="col_product_id" prefWidth="110.0" resizable="false" text="Product ID" />
+          <TableColumn fx:id="col_product_name" prefWidth="380.0" resizable="false" text="Product Name" />
+            <TableColumn fx:id="col_product_amount" resizable="false" text="Amount" />
+            <TableColumn fx:id="col_product_price" resizable="false" text="Price" />
+            <TableColumn fx:id="col_product_category" prefWidth="140.0" resizable="false" text="Category" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="pro_id" labelFloat="true" layoutX="14.0" layoutY="345.0" prefHeight="31.0" prefWidth="118.0" promptText="Product ID" />
+      <JFXTextField fx:id="pro_name" labelFloat="true" layoutX="141.0" layoutY="345.0" prefHeight="31.0" prefWidth="238.0" promptText="Product Name" />
+      <JFXTextField fx:id="pro_amount" labelFloat="true" layoutX="386.0" layoutY="345.0" prefHeight="31.0" prefWidth="118.0" promptText="Product Amount" />
+      <JFXTextField fx:id="pro_price" labelFloat="true" layoutX="513.0" layoutY="345.0" prefHeight="31.0" prefWidth="99.0" promptText="Product Price" />
+      <JFXComboBox fx:id="cmb_category" labelFloat="true" layoutX="620.0" layoutY="345.0" prefHeight="31.0" prefWidth="170.0" promptText="Select Category" />
+      <JFXTextField fx:id="pro_search" labelFloat="true" layoutX="141.0" layoutY="407.0" prefHeight="31.0" prefWidth="382.0" promptText="Search By Name" />
+      <JFXButton fx:id="btn_search" buttonType="RAISED" layoutX="540.0" layoutY="407.0" onAction="#searchProduct" prefHeight="31.0" prefWidth="33.0" style="-fx-background-color: #000000;" textFill="WHITE" textOverrun="CLIP">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="16" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btn_insert" layoutX="154.0" layoutY="488.0" onAction="#insertProduct" prefHeight="46.0" prefWidth="122.0" style="-fx-background-color: #000000;" text="INSERT" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="16" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btn_update" disable="true" layoutX="311.0" layoutY="488.0" onAction="#updateProduct" prefHeight="46.0" prefWidth="122.0" style="-fx-background-color: #000000;" text="UPDATE" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="16" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btn_clear" layoutX="471.0" layoutY="488.0" onAction="#clearProduct" prefHeight="46.0" prefWidth="122.0" style="-fx-background-color: #000000;" text="CLEAR" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REPLY" size="16" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="category_frame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CategoryController">
+   <children>
+      <TableView fx:id="tb_category" layoutX="14.0" layoutY="14.0" prefHeight="199.0" prefWidth="600.0" AnchorPane.bottomAnchor="201.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="col_cat_id" prefWidth="200.0" text="Category ID" />
+          <TableColumn fx:id="col_cat_name" prefWidth="400.0" text="Category Name" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="cat_id" labelFloat="true" layoutX="39.0" layoutY="231.0" prefHeight="31.0" prefWidth="204.0" promptText="Category ID" />
+      <JFXTextField fx:id="cat_name" labelFloat="true" layoutX="278.0" layoutY="231.0" prefHeight="31.0" prefWidth="277.0" promptText="Category Name" />
+      <JFXButton fx:id="btn_insert" layoutX="63.0" layoutY="304.0" onAction="#insertCategory" prefHeight="46.0" prefWidth="122.0" style="-fx-background-color: #000000;" text="INSERT" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="16" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btn_update" disable="true" layoutX="220.0" layoutY="304.0" onAction="#updateCategory" prefHeight="46.0" prefWidth="122.0" style="-fx-background-color: #000000;" text="UPDATE" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="16" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btn_clear" layoutX="380.0" layoutY="304.0" onAction="#clearCategory" prefHeight="46.0" prefWidth="122.0" style="-fx-background-color: #000000;" text="CLEAR" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REPLY" size="16" />
+         </graphic>
+      </JFXButton>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

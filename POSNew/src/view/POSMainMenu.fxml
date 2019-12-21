@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.POSMainMenuController">
+   <children>
+      <BorderPane prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefHeight="80.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="จัดการข้อมูลพื้นฐาน">
+                        <items>
+                          <MenuItem fx:id="menu_category" mnemonicParsing="false" onAction="#loadCategoryFrame" text="Category" />
+                              <MenuItem fx:id="menu_product" mnemonicParsing="false" onAction="#loadProductFrame" text="Product" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <HBox prefHeight="40.0" prefWidth="1200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="BARS" size="16" textAlignment="CENTER" wrappingWidth="18.714285850524902" />
+                           </graphic>
+                        </Label>
+                        <JFXButton fx:id="toolbar_category" focusTraversable="false" onAction="#loadCategoryFrame" prefHeight="40.0" prefWidth="120.0" styleClass="menu" stylesheets="@../css/style.css" text="Category">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="COPYRIGHT" size="16" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="toolbar_product" focusTraversable="false" onAction="#loadProductFrame" prefHeight="40.0" prefWidth="120.0" styleClass="menu" stylesheets="@../css/style.css" text="Product">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="PRODUCT_HUNT" size="16" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="toolbar_exit" focusTraversable="false" onAction="#exitProgram" prefHeight="40.0" prefWidth="120.0" styleClass="menu" stylesheets="@../css/style.css" text="Exit">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CLOSE" size="16" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <AnchorPane fx:id="content_pane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
